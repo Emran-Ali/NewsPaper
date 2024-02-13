@@ -1,0 +1,44 @@
+body {
+  font-family: "Merriweather", "SolaimanLipi", sans-serif;
+}
+
+.ul-item {
+  font-size: 12px;
+  padding-left: 0px;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+  border-right: 1px solid;
+}
+
+.nav-border {
+  border-bottom: 2px solid;
+}
+.img {
+  margin-left: -10px;
+}
+
+.title {
+  background-color: rgb(190, 120, 28);
+}
+.bdr {
+  border-bottom: 2px solid rgb(211, 120, 0);
+}
+.foot {
+  width: 100vh;
+  padding-left: 10%;
+  background: #233850;
+}
+.bg {
+  height: 4rem;
+  background-image: url("prayer.png") !important;
+}
+.bg-lst {
+  background: #57be4e !important;
+  margin: 2px;
+}
+.bg-lst2 {
+  background-color: #cde930;
+  margin: 2px;
+}
