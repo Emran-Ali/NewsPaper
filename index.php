@@ -1,3 +1,10 @@
+<?php
+include 'action/getData.php';
+
+$obj = new getData();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +78,7 @@
         </div>
     </div>
 
-    <?php include 'navbar.php' ?>
+
 
     <!-- container -->
     <div class="container">
@@ -79,7 +86,7 @@
 
             <?php
             include 'leftSide.php';
-            include 'rightSide.php'
+            include 'rightSide.php';
             ?>
             <div class="w-100 d-none d-md-block"></div>
         </div>

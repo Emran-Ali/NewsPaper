@@ -1,31 +1,39 @@
+<?php
+$res = $obj->HeadNews();
+
+?>
 <div class="col-md-8">
     <div class="col p-2 m-2">
         <div class="row">
             <!-- front News -->
             <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 pt-2 pt-sm-2 pt-md-2 pt-lg-2 pt-xl-2">
-                <div class="d-md-none d-lg-none d-xl-none">
-                    <a href="#" class="text-decoration-none text-white">
-                        <img class="card-img rounded-0 w-100 d-block" alt="text" src="fontNews.jpg" />
-                        <div class="card-body pb-0">
-                            <h3 class="card-title font-weight-bold">
-                                সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                ইমরানের দল
-                            </h3>
-                        </div>
-                    </a>
-                </div>
-                <!--for small screen -->
-                <div class="border border-0 d-none d-sm-none d-md-block d-lg-block d-xl-block">
-                    <a href="#" class="text-decoration-none text-dark">
-                        <img class="card-img rounded-0 w-100 d-block" alt="Text" src="fontNews.jpg" />
-                        <div class="card-body pl-0 py-3">
-                            <h2 class="card-title font-weight-bold" style="font-size: 28px !important">
-                                সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                ইমরানের দল
-                            </h2>
-                        </div>
-                    </a>
-                </div>
+                <?php
+                while ($data = $res->fetch_assoc()) {
+                ?>
+                    <div class="d-md-none d-lg-none d-xl-none">
+                        <a href="#" class="text-decoration-none text-white">
+                            <img class="card-img rounded-0 w-100 d-block" alt="text" src="<?php echo $data['Photo']; ?>" />
+                            <div class="card-body pb-0">
+                                <h3 class="card-title font-weight-bold">
+                                    <?php
+                                    echo $data['Heding'];
+                                    ?>
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                    <!--for small screen -->
+                    <div class="border border-0 d-none d-sm-none d-md-block d-lg-block d-xl-block">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <img class="card-img rounded-0 w-100 d-block" alt="Text" src="<?php echo $data['Photo']; ?>" />
+                            <div class="card-body pl-0 py-3">
+                                <h2 class="card-title font-weight-bold" style="font-size: 28px !important">
+                                    <?php echo $data['Heading']; ?>
+                                </h2>
+                            </div>
+                        </a>
+                    </div>
+                <?php } ?>
             </div>
             <!-- front side News -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-none d-sm-none d-md-block d-lg-block d-xl-block pt-2 pt-sm-2 pt-md-2 pt-lg-2 pt-xl-2">
