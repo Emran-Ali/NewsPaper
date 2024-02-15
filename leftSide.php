@@ -38,26 +38,22 @@ $res = $obj->HeadNews();
             <!-- front side News -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-none d-sm-none d-md-block d-lg-block d-xl-block pt-2 pt-sm-2 pt-md-2 pt-lg-2 pt-xl-2">
                 <div class="row">
-                    <div class="col-12">
-                        <a href="#">
-                            <figure class="figure">
-                                <img alt="Text" src="sNews2.jpg" class="figure-img img-fluid" />
-                                <figcaption class="figure-caption">
-                                    যশোরে যুবলীগ নেতাকে কুপিয়ে হত্যা
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#">
-                            <figure class="figure">
-                                <img loading="lazy" alt="Text" src="sNews1.jpg" class="figure-img img-fluid" />
-                                <figcaption class="figure-caption">
-                                    উপজেলা ভোটেও নেই সমমনাদের আগ্রহ
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
+                    <?php
+                    $res = $obj->subHead2();
+                    while ($data = $res->fetch_assoc()) {
+
+                    ?>
+                        <div class="col-12">
+                            <a href="#">
+                                <figure class="figure">
+                                    <img alt="Text" src="<?php echo $data['Photo']; ?>" class="figure-img img-fluid" />
+                                    <figcaption class="figure-caption">
+                                        <?php echo $data['Heading']; ?>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -409,7 +405,7 @@ $res = $obj->HeadNews();
                     <div class="float-left fs-4 text-dark bdr">দৃষ্টিপাত</div>
                 </a>
                 <?php
-                $res = $obj->CatHead(14);
+                $res = $obj->CatHead(15);
                 while ($data = $res->fetch_assoc()) {
 
                 ?>
@@ -427,7 +423,7 @@ $res = $obj->HeadNews();
                     </div>
                 <?php
                 }
-                $res = $obj->CatNews(14);
+                $res = $obj->CatNews(15);
                 while ($data = $res->fetch_assoc()) {
 
                 ?>

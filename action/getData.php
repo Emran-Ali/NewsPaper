@@ -11,9 +11,15 @@ class getData extends connection
         $res = $this->conn->query($sql);
         return $res;
     }
+    function subHead2()
+    {
+        $sql = "SELECT Id, Heading, Photo FROM `news` JOIN head_news on news.Id=head_news.News_Id ORDER BY Time DESC LIMIT 2";
+        $res = $this->conn->query($sql);
+        return $res;
+    }
     function subHead()
     {
-        $sql = "SELECT Id, Heading, Photo FROM `news` JOIN head_news on news.Id=head_news.News_Id LIMIT 9;";
+        $sql = "SELECT Id, Heading, Photo FROM `news` JOIN head_news on news.Id=head_news.News_Id ORDER BY Time DESC LIMIT 2,9 ";
         $res = $this->conn->query($sql);
         return $res;
     }
