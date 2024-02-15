@@ -30,7 +30,7 @@ $obj = new getData();
             <ul class="list-inline text-white ul-item">
                 <li class="list-inline-item pr-2">ঢাকা, বাংলাদেশ</li>
                 <li class="list-inline-item pr-2">
-                    শনিবার, ১০ ফেব্রুয়ারি ২০২৪, ২৭ মাঘ ১৪৩০ <br />
+                    শনিবার, ১০ ফেব্রুয়ারি ২০২৪, ২৭ মাঘ ১৪৩০ <br>
                 </li>
                 <li class="list-inline-item pr-2">
                     <a class="text-decoration-none text-white" href="#">আজকের পত্রিকা
@@ -77,9 +77,8 @@ $obj = new getData();
             </ul>
         </div>
     </div>
-
-
-
+    <!-- NavBar -->
+    <?php include 'navbar.php' ?>
     <!-- container -->
     <div class="container">
         <div class="row">

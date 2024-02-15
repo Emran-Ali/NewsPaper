@@ -1,5 +1,9 @@
 <div class="col-md-4">
-    <?php include 'sorbosesh.php' ?>
+    <?php
+    include 'sorbosesh.php';
+    ?>
+
+
     <div class="col">
         <div class="border border-1 border-bottom-0 text-center py-2">
             <a href="#" target="_blank">
@@ -12,6 +16,7 @@
             </a>
         </div>
     </div>
+    <!-- Servay -->
     <div class="col my-2 border border-1 border-warning">
         <div class="title text-center pt-1 fs-4">অনলাইন জরিপ</div>
         <div class="text-left p-3">
@@ -32,9 +37,10 @@
         </div>
         <div class="btn btn-primary mb-2">মতামত দিন</div>
     </div>
+    <!-- prayer -->
     <div class="col my-2">
         <div class="bg w-100">
-            <img src="prayer.png" alt="">
+            <img src="prayer.png" alt="Payer">
         </div>
         <div class="container d-flex flex-row justify-content-between py-2">
             <div class="col">
@@ -55,7 +61,7 @@
                 <p class="bg-lst2">৭:০৪</p>
             </div>
         </div>
-        <div class="bg-secondary h-100 d-flex text-center justify-content-around">
+        <div class="bg-secondary  d-flex text-center justify-content-around">
             <div class="text-white">সূর্যাস্ত : ৫:৫২</div>
             <div class="text-white">সূর্যোদয় : ৬:৩৪</div>
         </div>

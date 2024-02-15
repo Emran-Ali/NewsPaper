@@ -25,7 +25,7 @@ $res = $obj->HeadNews();
                     <!--for small screen -->
                     <div class="border border-0 d-none d-sm-none d-md-block d-lg-block d-xl-block">
                         <a href="#" class="text-decoration-none text-dark">
-                            <img class="card-img rounded-0 w-100 d-block" alt="Text" src="<?php echo $data['Photo']; ?>" />
+                            <img class="card-img rounded-0 w-100 d-block" src="<?php echo $data['Photo']; ?>" alt="Text" />
                             <div class="card-body pl-0 py-3">
                                 <h2 class="card-title font-weight-bold" style="font-size: 28px !important">
                                     <?php echo $data['Heading']; ?>
@@ -63,108 +63,30 @@ $res = $obj->HeadNews();
         </div>
     </div>
 
-    <!-- news body -->
+    <!-- news Sub Heading -->
+    <?php
+    $res = $obj->subHead();
+
+    ?>
     <div class="col p-2 m-2">
         <div id="show-news" class="row row-cols-2 row-cols-sm-2 row-cols-md-3">
-            <div class="col d-lg-block d-xl-block">
-                <a href="#" class="text-decoration-none">
-                    <figure class="figure">
-                        <img src="bNews1.jpg" class="figure-img h-100 w-100" alt="" />
-                        <figcaption class="figure-caption">
-                            কাতারে মৃত্যুদণ্ডপ্রাপ্ত ৮ ভারতীয় গুপ্তচরের মুক্তি
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
+            <?php
+            while ($data = $res->fetch_assoc()) {
 
-            <div class="col d-lg-block d-xl-block">
-                <a href="#" class="text-decoration-none">
-                    <figure class="figure">
-                        <img src="bNews2.jpg" class="figure-img h-100 w-100" alt="" />
-                        <figcaption class="figure-caption">
-                            রুদ্ধদ্বার বৈঠকে নওয়াজ-বিলাওয়াল ও সিদ্দিকী, কী সিদ্ধান্ত
-                            নিল
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
 
-            <div class="col d-lg-block d-xl-block">
-                <a href="#" class="text-decoration-none">
-                    <figure class="figure">
-                        <img src="bNews3.jpg" class="figure-img h-100 w-100" alt="" />
-                        <figcaption class="figure-caption">
-                            সীতাকুণ্ডে তিনশ কোটি টাকার ভূমি বেদখল
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
+            ?>
+                <div class="col d-lg-block d-xl-block">
+                    <a href="#" class="text-decoration-none">
+                        <figure class="figure">
+                            <img src="<?php echo $data['Photo'] ?>" class="figure-img h-100 w-100" alt="Text" />
+                            <figcaption class="figure-caption">
+                                <?php echo $data['Heading'] ?>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            <?php    }  ?>
 
-            <div class="col d-lg-block d-xl-block">
-                <a href="#" class="text-decoration-none">
-                    <figure class="figure">
-                        <img src="bNews3.jpg" class="figure-img h-100 w-100" alt="" />
-                        <figcaption class="figure-caption">
-                            সীতাকুণ্ডে তিনশ কোটি টাকার ভূমি বেদখল
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <div class="col d-lg-block d-xl-block">
-                <a href="#" class="text-decoration-none">
-                    <figure class="figure">
-                        <img src="bNews1.jpg" class="figure-img h-100 w-100" alt="" />
-                        <figcaption class="figure-caption">
-                            কাতারে মৃত্যুদণ্ডপ্রাপ্ত ৮ ভারতীয় গুপ্তচরের মুক্তি
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <div class="col d-lg-block d-xl-block">
-                <a href="#" class="text-decoration-none">
-                    <figure class="figure">
-                        <img src="bNews1.jpg" class="figure-img h-100 w-100" alt="" />
-                        <figcaption class="figure-caption">
-                            কাতারে মৃত্যুদণ্ডপ্রাপ্ত ৮ ভারতীয় গুপ্তচরের মুক্তি
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <div class="col d-lg-block d-xl-block">
-                <a href="#" class="text-decoration-none">
-                    <figure class="figure">
-                        <img src="bNews1.jpg" class="figure-img h-100 w-100" alt="" />
-                        <figcaption class="figure-caption">
-                            কাতারে মৃত্যুদণ্ডপ্রাপ্ত ৮ ভারতীয় গুপ্তচরের মুক্তি
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <div class="col d-lg-block d-xl-block">
-                <a href="#" class="text-decoration-none">
-                    <figure class="figure">
-                        <img src="bNews1.jpg" class="figure-img h-100 w-100" alt="" />
-                        <figcaption class="figure-caption">
-                            কাতারে মৃত্যুদণ্ডপ্রাপ্ত ৮ ভারতীয় গুপ্তচরের মুক্তি
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <div class="col d-lg-block d-xl-block">
-                <a href="Text" class="text-decoration-none">
-                    <figure class="figure">
-                        <img src="bNews1.jpg" class="figure-img h-100 w-100" alt="" />
-                        <figcaption class="figure-caption">
-                            কাতারে মৃত্যুদণ্ডপ্রাপ্ত ৮ ভারতীয় গুপ্তচরের মুক্তি
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
         </div>
     </div>
     <!-- catagory 1 -->
@@ -174,43 +96,41 @@ $res = $obj->HeadNews();
                 <a href="#" class="text-decoration-none">
                     <div class="float-left fs-4 text-dark bdr">জাতীয়</div>
                 </a>
-                <div class="float-right pt-2">
-                    <div class="">
-                        <a href="#" class="text-decoration-none text-white">
-                            <img class="card-img rounded-0 w-100 d-block" alt="text" src="fontNews.jpg" />
+                <?php
+                $res = $obj->CatHead(2);
+                while ($data = $res->fetch_assoc()) {
+
+                ?>
+                    <div class="float-right pt-2">
+                        <div class="">
+                            <a href="#" class="text-decoration-none text-white">
+                                <img class="card-img rounded-0 w-100 d-block" src="<?php echo $data['Photo']; ?>" alt="text" />
+                                <div class="card-body pb-0">
+                                    <h3 class="card-title font-weight-bold text-dark fs-4 pt-2">
+                                        <?php echo $data['Heading']; ?>
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php
+                }
+                $res = $obj->CatNews(2);
+                while ($data = $res->fetch_assoc()) {
+
+                ?>
+                    <div class="float-right pt-2">
+                        <a href="#" class="text-decoration-none d-flex flex-row">
+                            <img class="card-img rounded-0 w-25" src="<?php echo $data['Photo'] ?>" alt="text" />
                             <div class="card-body pb-0">
-                                <h3 class="card-title font-weight-bold text-dark fs-4 pt-2">
-                                    সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                    ইমরানের দল
+                                <h3 class="card-title fs-6 text-dark pl-10">
+                                    <?php echo $data['Heading'] ?>
                                 </h3>
                             </div>
                         </a>
                     </div>
-                </div>
+                <?php } ?>
 
-                <div class="float-right pt-2">
-                    <a href="#" class="text-decoration-none d-flex flex-row">
-                        <img class="card-img rounded-0 w-25" alt="text" src="fontNews.jpg" />
-                        <div class="card-body pb-0">
-                            <h3 class="card-title fs-6 text-dark pl-10">
-                                সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                ইমরানের দল
-                            </h3>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="float-right pt-2">
-                    <a href="#" class="text-decoration-none d-flex flex-row">
-                        <img class="card-img rounded-0 w-25" alt="text" src="fontNews.jpg" />
-                        <div class="card-body pb-0">
-                            <h3 class="card-title fs-6 text-dark pl-10">
-                                সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                ইমরানের দল
-                            </h3>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
 
@@ -218,42 +138,42 @@ $res = $obj->HeadNews();
             <div class="text-decoration-none">
                 <a href="#" class="text-decoration-none">
                     <div class="float-left fs-4 text-dark bdr">রাজনীতি</div>
+                </a>
+                <?php
+                $res = $obj->CatHead(3);
+                while ($data = $res->fetch_assoc()) {
+
+                ?>
                     <div class="float-right pt-2">
                         <div class="">
                             <a href="#" class="text-decoration-none text-white">
-                                <img class="card-img rounded-0 w-100 d-block" alt="text" src="politics.jpg" />
+                                <img class="card-img rounded-0 w-100 d-block" src="<?php echo $data['Photo']; ?>" alt="text" />
                                 <div class="card-body pb-0">
                                     <h3 class="card-title font-weight-bold text-dark fs-4 pt-2">
-                                        মুক্তি পেলেন জামায়াত নেতা রফিকুল
+                                        <?php echo $data['Heading']; ?>
                                     </h3>
                                 </div>
                             </a>
                         </div>
                     </div>
+                <?php
+                }
+                $res = $obj->CatNews(3);
+                while ($data = $res->fetch_assoc()) {
 
+                ?>
                     <div class="float-right pt-2">
                         <a href="#" class="text-decoration-none d-flex flex-row">
-                            <img class="card-img rounded-0 w-25" alt="text" src="fontNews.jpg" />
+                            <img class="card-img rounded-0 w-25" src="<?php echo $data['Photo'] ?>" alt="text" />
                             <div class="card-body pb-0">
                                 <h3 class="card-title fs-6 text-dark pl-10">
-                                    সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                    ইমরানের দল
+                                    <?php echo $data['Heading'] ?>
                                 </h3>
                             </div>
                         </a>
                     </div>
-                    <div class="float-right pt-2">
-                        <a href="#" class="text-decoration-none d-flex flex-row">
-                            <img class="card-img rounded-0 w-25" alt="text" src="fontNews.jpg" />
-                            <div class="card-body pb-0">
-                                <h3 class="card-title fs-6 text-dark pl-10">
-                                    সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                    ইমরানের দল
-                                </h3>
-                            </div>
-                        </a>
-                    </div>
-                </a>
+                <?php } ?>
+
             </div>
         </div>
     </div>
@@ -264,43 +184,42 @@ $res = $obj->HeadNews();
             <div class="text-decoration-none">
                 <a href="#" class="text-decoration-none">
                     <div class="float-left fs-4 text-dark bdr">আন্তর্জাতিক</div>
+                </a>
+                <?php
+                $res = $obj->CatHead(5);
+                while ($data = $res->fetch_assoc()) {
+
+                ?>
                     <div class="float-right pt-2">
                         <div class="">
                             <a href="#" class="text-decoration-none text-white">
-                                <img class="card-img rounded-0 w-100 d-block" alt="text" src="international.jpg" />
+                                <img class="card-img rounded-0 w-100 d-block" src="<?php echo $data['Photo']; ?>" alt="text" />
                                 <div class="card-body pb-0">
-                                    <h3 class="card-title fw-bold text-dark fs-6 pt-2">
-                                        আবারও মার্কিন প্রতিরক্ষামন্ত্রী হাসপাতালে
+                                    <h3 class="card-title font-weight-bold text-dark fs-4 pt-2">
+                                        <?php echo $data['Heading']; ?>
                                     </h3>
                                 </div>
                             </a>
                         </div>
                     </div>
+                <?php
+                }
+                $res = $obj->CatNews(5);
+                while ($data = $res->fetch_assoc()) {
 
+                ?>
                     <div class="float-right pt-2">
                         <a href="#" class="text-decoration-none d-flex flex-row">
-                            <img class="card-img rounded-0 w-25" alt="text" src="fontNews.jpg" />
+                            <img class="card-img rounded-0 w-25" src="<?php echo $data['Photo'] ?>" alt="text" />
                             <div class="card-body pb-0">
                                 <h3 class="card-title fs-6 text-dark pl-10">
-                                    সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                    ইমরানের দল
+                                    <?php echo $data['Heading'] ?>
                                 </h3>
                             </div>
                         </a>
                     </div>
+                <?php } ?>
 
-                    <div class="float-right pt-2">
-                        <a href="#" class="text-decoration-none d-flex flex-row">
-                            <img class="card-img rounded-0 w-25" alt="text" src="fontNews.jpg" />
-                            <div class="card-body pb-0">
-                                <h3 class="card-title fs-6 text-dark pl-10">
-                                    সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                    ইমরানের দল
-                                </h3>
-                            </div>
-                        </a>
-                    </div>
-                </a>
             </div>
         </div>
 
@@ -308,42 +227,42 @@ $res = $obj->HeadNews();
             <div class="text-decoration-none">
                 <a href="#" class="text-decoration-none">
                     <div class="float-left fs-4 text-dark bdr">সারাদেশ</div>
+                </a>
+                <?php
+                $res = $obj->CatHead(6);
+                while ($data = $res->fetch_assoc()) {
+
+                ?>
                     <div class="float-right pt-2">
                         <div class="">
                             <a href="#" class="text-decoration-none text-white">
-                                <img class="card-img rounded-0 w-100 d-block" alt="text" src="saradesh.jpg" />
+                                <img class="card-img rounded-0 w-100 d-block" src="<?php echo $data['Photo']; ?>" alt="text" />
                                 <div class="card-body pb-0">
-                                    <h3 class="card-title fw-bold text-dark fs-6 pt-2">
-                                        একটি মাছের দাম ৪ লাখ টাকা!
+                                    <h3 class="card-title font-weight-bold text-dark fs-4 pt-2">
+                                        <?php echo $data['Heading']; ?>
                                     </h3>
                                 </div>
                             </a>
                         </div>
                     </div>
+                <?php
+                }
+                $res = $obj->CatNews(6);
+                while ($data = $res->fetch_assoc()) {
 
+                ?>
                     <div class="float-right pt-2">
                         <a href="#" class="text-decoration-none d-flex flex-row">
-                            <img class="card-img rounded-0 w-25" alt="text" src="fontNews.jpg" />
+                            <img class="card-img rounded-0 w-25" src="<?php echo $data['Photo'] ?>" alt="text" />
                             <div class="card-body pb-0">
                                 <h3 class="card-title fs-6 text-dark pl-10">
-                                    সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                    ইমরানের দল
+                                    <?php echo $data['Heading'] ?>
                                 </h3>
                             </div>
                         </a>
                     </div>
-                    <div class="float-right pt-2">
-                        <a href="#" class="text-decoration-none d-flex flex-row">
-                            <img class="card-img rounded-0 w-25" alt="text" src="fontNews.jpg" />
-                            <div class="card-body pb-0">
-                                <h3 class="card-title fs-6 text-dark pl-10">
-                                    সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                    ইমরানের দল
-                                </h3>
-                            </div>
-                        </a>
-                    </div>
-                </a>
+                <?php } ?>
+
             </div>
         </div>
     </div>
@@ -353,67 +272,45 @@ $res = $obj->HeadNews();
             <div class="fs-4 text-dark bdr">ইসলাম ও জীবন</div>
         </a>
         <div class="row row-cols-sm-1 row-cols-md-2 d-flex justify-content-between">
-            <div class="col">
-                <div class="border border-0 d-md-block d-lg-block d-xl-block mt-2">
-                    <a href="#" class="text-decoration-none text-dark">
-                        <img class="card-img rounded-0 w-100 d-block" alt="Text" src="islam1.jpg" />
-                        <div class="card-body pl-0 py-3">
-                            <h2 class="card-title fw-bold text-dark" style="font-size: 28px !important">
-                                নামাজের সময়সূচি: ১২ ফেব্রুয়ারি ২০২৪
-                            </h2>
-                            <p class="pt-2">
-                                ইমানের পর ইসলামের সবচেয়ে তাৎপর্যপূর্ণ আমল হলো সালাত বা
-                                নামাজ।...
-                            </p>
-                        </div>
-                    </a>
+            <?php
+            $res = $obj->CatHead(21);
+            while ($data = $res->fetch_assoc()) {
+            ?>
+                <div class="col">
+                    <div class="border border-0 d-md-block d-lg-block d-xl-block mt-2">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <img class="card-img rounded-0 w-100 d-block" alt="Text" src="<?php echo $data['Photo'] ?>" />
+                            <div class="card-body pl-0 py-3">
+                                <h2 class="card-title fw-bold text-dark" style="font-size: 28px !important">
+                                    <?php echo $data['Heading'] ?>
+                                </h2>
+                                <p class="pt-2">
+                                    ইমানের পর ইসলামের সবচেয়ে তাৎপর্যপূর্ণ আমল হলো সালাত বা
+                                    নামাজ।...
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
             <!-- right  -->
             <div class="col">
-                <div class="row pt-2">
-                    <div class="col d-lg-block d-xl-block">
-                        <a href="Text" class="text-decoration-none">
-                            <figure class="figure">
-                                <img src="bNews1.jpg" class="figure-img h-100 w-100" alt="" />
-                                <figcaption class="figure-caption">
-                                    কাতারে মৃত্যুদণ্ডপ্রাপ্ত ৮ ভারতীয় গুপ্তচরের মুক্তি
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="col d-lg-block d-xl-block">
-                        <a href="Text" class="text-decoration-none">
-                            <figure class="figure">
-                                <img src="bNews1.jpg" class="figure-img h-100 w-100" alt="" />
-                                <figcaption class="figure-caption">
-                                    কাতারে মৃত্যুদণ্ডপ্রাপ্ত ৮ ভারতীয় গুপ্তচরের মুক্তি
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
-                <div class="row pt-2">
-                    <div class="col d-lg-block d-xl-block">
-                        <a href="Text" class="text-decoration-none">
-                            <figure class="figure">
-                                <img src="bNews1.jpg" class="figure-img h-100 w-100" alt="" />
-                                <figcaption class="figure-caption">
-                                    কাতারে মৃত্যুদণ্ডপ্রাপ্ত ৮ ভারতীয় গুপ্তচরের মুক্তি
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="col d-lg-block d-xl-block">
-                        <a href="Text" class="text-decoration-none">
-                            <figure class="figure">
-                                <img src="bNews1.jpg" class="figure-img h-100 w-100" alt="" />
-                                <figcaption class="figure-caption">
-                                    কাতারে মৃত্যুদণ্ডপ্রাপ্ত ৮ ভারতীয় গুপ্তচরের মুক্তি
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
+                <div class="row row-cols-2">
+                    <?php
+                    $res = $obj->CatNews(21);
+                    while ($data = $res->fetch_assoc()) {
+                    ?>
+                        <div class="mt-2 d-lg-block d-xl-block">
+                            <a href="Text" class="text-decoration-none">
+                                <figure class="figure">
+                                    <img src="<?php echo $data['Photo']; ?>" class="figure-img h-100 w-100" alt="" />
+                                    <figcaption class="figure-caption">
+                                        <?php echo $data['Heading']; ?>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -427,41 +324,40 @@ $res = $obj->HeadNews();
                 <a href="#" class="text-decoration-none">
                     <div class="float-left fs-4 text-dark bdr">সম্পাদকীয়</div>
                 </a>
-                <div class="float-right pt-2">
-                    <div class="">
-                        <a href="#" class="text-decoration-none text-white">
-                            <img class="card-img rounded-0 w-100 d-block" alt="text" src="sompadokio.jpg" />
+                <?php
+                $res = $obj->CatHead(16);
+                while ($data = $res->fetch_assoc()) {
+
+                ?>
+                    <div class="float-right pt-2">
+                        <div class="">
+                            <a href="#" class="text-decoration-none text-white">
+                                <img class="card-img rounded-0 w-100 d-block" src="<?php echo $data['Photo']; ?>" alt="text" />
+                                <div class="card-body pb-0">
+                                    <h3 class="card-title font-weight-bold text-dark fs-4 pt-2">
+                                        <?php echo $data['Heading']; ?>
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php
+                }
+                $res = $obj->CatNews(16);
+                while ($data = $res->fetch_assoc()) {
+
+                ?>
+                    <div class="float-right pt-2">
+                        <a href="#" class="text-decoration-none d-flex flex-row">
+                            <img class="card-img rounded-0 w-25" src="<?php echo $data['Photo'] ?>" alt="text" />
                             <div class="card-body pb-0">
-                                <h3 class="card-title fw-bold text-dark fs-6 pt-2">
-                                    ব্যাংক ও আর্থিক প্রতিষ্ঠানের দুরবস্থা
+                                <h3 class="card-title fs-6 text-dark pl-10">
+                                    <?php echo $data['Heading'] ?>
                                 </h3>
                             </div>
                         </a>
                     </div>
-                </div>
-
-                <div class="float-right pt-2">
-                    <a href="#" class="text-decoration-none d-flex flex-row">
-                        <img class="card-img rounded-0" alt="text" width="90" height="60" src="fontNews.jpg" />
-                        <div class="card-body pb-0">
-                            <h3 class="card-title fs-6 text-dark pl-10">
-                                সরকার গঠন নিয়ে যে ৪ ঘটনা ঘটতে পারে পাকিস্তান
-                            </h3>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="float-right pt-2">
-                    <a href="#" class="text-decoration-none d-flex flex-row">
-                        <img class="card-img rounded-0" alt="text" width="90" height="60" src="fontNews.jpg" />
-                        <div class="card-body pb-0">
-                            <h3 class="card-title fs-6 text-dark pl-10">
-                                সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                ইমরানের দল
-                            </h3>
-                        </div>
-                    </a>
-                </div>
+                <?php } ?>
             </div>
         </div>
 
@@ -470,42 +366,40 @@ $res = $obj->HeadNews();
                 <a href="#" class="text-decoration-none">
                     <div class="float-left fs-4 text-dark bdr">বাতায়ন</div>
                 </a>
-                <div class="float-right pt-2">
-                    <div class="">
-                        <a href="#" class="text-decoration-none text-white">
-                            <img class="card-img rounded-0 w-100 d-block" alt="text" src="fontNews.jpg" />
+                <?php
+                $res = $obj->CatHead(14);
+                while ($data = $res->fetch_assoc()) {
+
+                ?>
+                    <div class="float-right pt-2">
+                        <div class="">
+                            <a href="#" class="text-decoration-none text-white">
+                                <img class="card-img rounded-0 w-100 d-block" src="<?php echo $data['Photo']; ?>" alt="text" />
+                                <div class="card-body pb-0">
+                                    <h3 class="card-title font-weight-bold text-dark fs-4 pt-2">
+                                        <?php echo $data['Heading']; ?>
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php
+                }
+                $res = $obj->CatNews(14);
+                while ($data = $res->fetch_assoc()) {
+
+                ?>
+                    <div class="float-right pt-2">
+                        <a href="#" class="text-decoration-none d-flex flex-row">
+                            <img class="card-img rounded-0 w-25" src="<?php echo $data['Photo'] ?>" alt="text" />
                             <div class="card-body pb-0">
-                                <h3 class="card-title fw-bold text-dark fs-6 pt-2">
-                                    অর্থনৈতিক উন্নয়নে বাধা দারিদ্র্য ও বেকারত্ব
+                                <h3 class="card-title fs-6 text-dark pl-10">
+                                    <?php echo $data['Heading'] ?>
                                 </h3>
                             </div>
                         </a>
                     </div>
-                </div>
-
-                <div class="float-right pt-2">
-                    <a href="#" class="text-decoration-none d-flex flex-row">
-                        <img class="card-img rounded-0" alt="text" width="90" height="60" src="fontNews.jpg" />
-                        <div class="card-body pb-0">
-                            <h3 class="card-title fs-6 text-dark pl-10">
-                                সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                ইমরানের দল
-                            </h3>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="float-right pt-2">
-                    <a href="#" class="text-decoration-none d-flex flex-row">
-                        <img class="card-img rounded-0" alt="text" width="90" height="60" src="fontNews.jpg" />
-                        <div class="card-body pb-0">
-                            <h3 class="card-title fs-6 text-dark pl-10">
-                                সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                ইমরানের দল
-                            </h3>
-                        </div>
-                    </a>
-                </div>
+                <?php } ?>
             </div>
         </div>
 
@@ -513,42 +407,41 @@ $res = $obj->HeadNews();
             <div class="text-decoration-none">
                 <a href="#" class="text-decoration-none">
                     <div class="float-left fs-4 text-dark bdr">দৃষ্টিপাত</div>
+                </a>
+                <?php
+                $res = $obj->CatHead(14);
+                while ($data = $res->fetch_assoc()) {
+
+                ?>
                     <div class="float-right pt-2">
                         <div class="">
                             <a href="#" class="text-decoration-none text-white">
-                                <img class="card-img rounded-0 w-100 d-block" alt="text" src="dristypat.jpg" />
+                                <img class="card-img rounded-0 w-100 d-block" src="<?php echo $data['Photo']; ?>" alt="text" />
                                 <div class="card-body pb-0">
-                                    <h3 class="card-title fw-bold text-dark fs-6 pt-2">
-                                        বাজার নিয়ন্ত্রণে কার্যকর পদক্ষেপ চাই
+                                    <h3 class="card-title font-weight-bold text-dark fs-4 pt-2">
+                                        <?php echo $data['Heading']; ?>
                                     </h3>
                                 </div>
                             </a>
                         </div>
                     </div>
+                <?php
+                }
+                $res = $obj->CatNews(14);
+                while ($data = $res->fetch_assoc()) {
 
+                ?>
                     <div class="float-right pt-2">
                         <a href="#" class="text-decoration-none d-flex flex-row">
-                            <img class="card-img rounded-0" alt="text" width="90" height="60" src="fontNews.jpg" />
+                            <img class="card-img rounded-0 w-25" src="<?php echo $data['Photo'] ?>" alt="text" />
                             <div class="card-body pb-0">
                                 <h3 class="card-title fs-6 text-dark pl-10">
-                                    সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                    ইমরানের দল
+                                    <?php echo $data['Heading'] ?>
                                 </h3>
                             </div>
                         </a>
                     </div>
-                    <div class="float-right pt-2">
-                        <a href="#" class="text-decoration-none d-flex flex-row">
-                            <img class="card-img rounded-0" width="90" height="60" alt="text" src="fontNews.jpg" />
-                            <div class="card-body pb-0">
-                                <h3 class="card-title fs-6 text-dark pl-10">
-                                    সরকার গঠনের পথে নওয়াজ-বিলাওয়াল, যে সিদ্ধান্ত নিয়েছে
-                                    ইমরানের দল
-                                </h3>
-                            </div>
-                        </a>
-                    </div>
-                </a>
+                <?php } ?>
             </div>
         </div>
     </div>

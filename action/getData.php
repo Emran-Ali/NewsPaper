@@ -11,6 +11,12 @@ class getData extends connection
         $res = $this->conn->query($sql);
         return $res;
     }
+    function subHead()
+    {
+        $sql = "SELECT Id, Heading, Photo FROM `news` JOIN head_news on news.Id=head_news.News_Id LIMIT 9;";
+        $res = $this->conn->query($sql);
+        return $res;
+    }
     function CatHead($cat_id)
     {
 
@@ -20,7 +26,7 @@ class getData extends connection
     }
     function CatNews($cat_id)
     {
-        $sql = "SELECT Heading, Photo FROM `news`  WHERE Cat_Id='$cat_id' AND Id NOT IN(SELECT News_Id FROM head_news) ORDER BY Time DESC LIMIT 4";
+        $sql = "SELECT Heading, Photo FROM `news`  WHERE Cat_Id='$cat_id' AND Id NOT IN (SELECT News_Id FROM head_news) ORDER BY Time DESC LIMIT 4";
         $res = $this->conn->query($sql);
         return $res;
     }
